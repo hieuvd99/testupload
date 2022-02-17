@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="ISO-8859-1">
+<title>User Manager</title>
+</head>
+<body>
+	<div>
+		<h1>User</h1>
+		<table style="border: solid">
+			<thead>
+				<tr>
+					<th>Name</th>
+					<th>Phone</th>
+					<th>Email</th>
+					<th>Birthday</th>
+				</tr>
+			</thead>	
+			<tr th:each = "user : ${listUser}" >
+				<td th:text="${user.name}"></td>
+				<td th:text="${user.phone}"></td>
+				<td th:text="${user.email}"></td>
+				<td th:text="${user.birthday}"></td>
+			</tr>
+		</table>
+	
+	</div>
+</body>
+</html>
